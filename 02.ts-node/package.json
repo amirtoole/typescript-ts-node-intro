@@ -1,0 +1,19 @@
+{
+  "name": "02.ts-node",
+  "version": "1.0.0",
+  "description": "Intro to ts-node",
+  "main": "index.ts",
+  "repository": "https://github.com/hellofornow/typescript-ts-node-intro",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "start:watch": "nodemon --exec ts-node --watch src/**/*.ts src/index.ts"
+  },
+  "author": "Amir Toole",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "ts-node": "^5.0.1",
+    "typescript": "~2.6.2"
+  }
+}

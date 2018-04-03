@@ -1,0 +1,80 @@
+{
+  "name": "nest-typescript-starter",
+  "version": "1.0.0",
+  "description": "Nest TypeScript starter repository",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently --kill-others -n \"server,ng\" \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "ts-node src/server/main.ts",
+    "start:server:watch": "nodemon",
+    "start:client": "ng serve",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "dependencies": {
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@nestjs/common": "^4.5.9",
+    "@nestjs/core": "^4.5.10",
+    "@nestjs/microservices": "^4.5.8",
+    "@nestjs/testing": "^4.5.5",
+    "@nestjs/websockets": "^4.5.8",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^5.5.6",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "~1.7.3",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "@types/express": "^4.0.39",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/jest": "^21.1.8",
+    "@types/node": "^9.3.0",
+    "@types/supertest": "^2.0.4",
+    "codelyzer": "^4.0.1",
+    "concurrently": "^3.5.1",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "jest": "^21.2.1",
+    "karma": "~2.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "nodemon": "^1.14.1",
+    "prettier": "^1.11.1",
+    "protractor": "~5.1.2",
+    "supertest": "^3.0.0",
+    "ts-jest": "^21.2.4",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "5.3.2",
+    "typescript": "^2.6.2"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  }
+}

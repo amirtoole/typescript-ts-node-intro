@@ -1,0 +1,20 @@
+{
+  "name": "01.intro",
+  "version": "1.0.0",
+  "description": "Intro to TypeScript",
+  "main": "index.js",
+  "repository": "https://github.com/hellofornow/typescript-ts-node-intro",
+  "scripts": {
+    "transpile": "tsc",
+    "start": "npm run transpile && node dist/index.js",
+    "transpile:watch": "tsc -w",
+    "start:watch": "nodemon --watch dist ./dist/index"
+  },
+  "author": "Amir Toole",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "typescript": "~2.6.2"
+  }
+}

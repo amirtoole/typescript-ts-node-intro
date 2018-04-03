@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome
+  </h1>
+  <img width="250" src="assets/welcome.jpg">
+</div>
+<h2>API testing</h2>
+<div>
+  <form (submit)="sayHello(name.value)">
+    <input placeholder="name" #name />
+    <input type="submit" value="Send"/>
+  </form>
+  <h1 *ngIf="server_response">Response</h1>
+  <div>
+    {{server_response | json}}
+  </div>
+</div>
+
